@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docx Analyzer</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font: Rubik (Hebrew support) -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="drop-zone" class="drop-zone">
+      <p id="file-label">Drag and drop your .docx file here</p>
+    </div>
+
+    <input type="file" id="file-input" accept=".docx" />
+
+    <div id="actions" class="actions hidden">
+      <button id="remove-btn">Remove File</button>
+      <button id="analyze-btn">Start Analyzing</button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div id="response-box" class="response-box hidden" dir="rtl"></div>
+    <button id="download-btn" class="hidden">📄 הורד כ-PDF</button>
+  </div>
+
+  <!-- Your logic -->
+  <script src="script.js"></script>
+</body>
+</html>
