@@ -43,7 +43,7 @@ document.getElementById('analyze-btn').addEventListener('click', () => {
   const formData = new FormData();
   formData.append('file', selectedFile);
 
-  fetch('http://localhost:5050/analyze', {
+  fetch('http://docrecommenderbackend.onrender.com/analyze', {
     method: 'POST',
     body: formData,
   })
